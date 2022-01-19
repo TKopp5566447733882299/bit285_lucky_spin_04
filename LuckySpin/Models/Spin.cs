@@ -6,7 +6,10 @@ namespace LuckySpin.Models
         Random random = new Random();
         private int a, b, c; //instance variables
 
-        //public Player Player { get; set; }
+        public Player Player {
+          get; 
+          set; 
+        }
 
         public int A
         {
@@ -36,13 +39,11 @@ namespace LuckySpin.Models
         public string Display
         {
             get
-            {
-                if (a == 7 || b == 7 || c == 7)
-                {
+            {Player player = Player;
+                if (a == player.PlayerLuck || b == 7 || c == 7) {// how else does it get the player luck
                     return "block";
                 }
-                else
-                {
+                else {
                     return "none";
                 }
             }
